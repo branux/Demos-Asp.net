@@ -1,0 +1,8 @@
+﻿*** Criando um WebServer no Console ***
+
+1. crie um projeto console
+2. install-package MicroSoft.Owin.Hosting
+3. install-package MicroSoft.Owin.Host.HttpListener
+4. Crie uma classe com o método public void Configuration(IAppBuilder app)
+5. Crie por a resposta às requisições app.Run(ctx => {return ctx.Response.WriteAsync("Hello World in Katana!");});
+6. Start o host na classe Main e abra a url no browser
