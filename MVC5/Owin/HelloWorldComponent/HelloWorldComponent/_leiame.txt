@@ -1,0 +1,10 @@
+﻿** Criando o seu próprio componente p/ adicionar no pipeline do Owin **
+
+
+1. Crie um projeto console
+2. install-package MicroSoft.Owin.Hosting
+3. install-package MicroSoft.Owin.Host.HttpListener
+4. Crie uma classe com o método public void Configuration(IAppBuilder app)
+5. Crie a classe HelloWorldComponent
+6. Crie um método de extensão UseHelloWorld
+7. Start o host na classe Main e abra a url no browser
