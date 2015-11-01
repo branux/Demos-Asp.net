@@ -1,0 +1,40 @@
+﻿** Mutiple Migrations **
+
+Criar:
+1. Uma BlankSolution - Books
+2. Um projeto Web - MVC c/ Individual Credentials - Books.Web
+3. Uma ClassLibrary Books.Entities
+4. Uma Entidade Books e enum Genre
+5. Uma pasta DataContext no projeto Web
+6. Um BookDb.cs com um DbSet<Book>
+7. Um Identity.cs recortando o ApplicationDbContext
+
+Comandos Nuget:
+1. Enable-Migrations -ContextTypeName IdentityDb -MigrationsDirectory DataContext\IdentityMigrations
+2. Enable-Migrations -ContextTypeName BooksDb -MigrationsDirectory DataContext\BooksMigrations
+3. Add-Migration -ConfigurationTypeName Books.Web.DataContext.IdentityMigrations.Configuration "InitialCreate"
+4. Add-Migration -ConfigurationTypeName Books.Web.DataContext.BooksMigrations.Configuration "InitialCreate"
+5. update-database -ConfigurationTypeName Books.Web.DataContext.IdentityMigrations.Configuration
+6. update-database -ConfigurationTypeName Books.Web.DataContext.BooksMigrations.Configuration
+
+
+** Scaffold **
+1. Crie um Controller usando o template MVC 5 Controller with views, using Entity Framework, informando o modelo Book.cs, o Contexto BooksDb
+2. Adicione o atributo [Authorize] ao controller criado
+
+
+** Async **
+1. Crie um controller via Scaffold habilitando a opção "Use async controller actions"
+
+
+** Log com DataBase.Log **
+1. Adicione no ctor do DbContext:
+	Database.Log = sql => Debug.Write(sql);
+2. Acompanhe na janela do output
+
+** Log com Glimpse **
+1. Instale os pacotes:
+	- Glimpse.Mvc5
+	- Glimpse.EF6
+2. Ative o Glimpse através da URL
+	http://localhost:7144/glimpse.axd
