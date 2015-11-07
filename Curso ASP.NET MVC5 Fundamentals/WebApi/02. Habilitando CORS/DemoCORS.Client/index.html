@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo CORS</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <h3>Cors Request</h3>
+    <p>
+        Cross-origin resource sharing (CORS)(ou compartilhamento de recursos de origem cruzada) é uma especificação de uma tecnologia de navegadores que define meios para um servidor permitir que seus recursos sejam acessados por uma página web de um domínio diferente.[1] Esse tipo de acesso seria de outra forma negado pela same origin policy. CORS define um meio pelo qual um navegador e um servidor web podem interagir para determinar se devem ou não utilizar/permitir requisições cross-origem[2] . É um acordo que permite grande flexibilidade, mas é mais seguro que permitir todos as requisições desse tipo.
+    </p>
+    <p>
+        <a href="https://pt.wikipedia.org/wiki/Cross-origin_resource_sharing" target="blank">Clique aqui para mais detalhes</a>
+    </p>
+
+    <button id="getDados">Buscar Dados da Api dessa solution</button>
+    <pre id="output"></pre>
+
+    <script src="Scripts/jquery-2.1.4.js"></script>
+    <script>
+        $(function () {
+            var getDados = function () {
+                $.get(url).always(showResponse);
+                return false;
+            };
+
+            var showResponse = function (dados) {
+                $("#output").text(JSON.stringify(dados, null, 4));
+            };
+
+            var url = "http://localhost:51138/api/values";
+
+            $("#getDados").click(getDados);
+        });
+    </script>
+
+
+</body>
+</html>

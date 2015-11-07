@@ -1,0 +1,9 @@
+** CORS Request **
+1. Baixe o pacote Microsoft.AspNet.WebApi.Cors
+2. Configure o CORS (duas formas):
+	- via WebApiConfig.cs:
+	var cors = new EnableCorsAttribute("*","*","GET");
+	config.EnableCors(cors);
+
+	- via atributo:
+	[EnableCors("*", "*", "GET")]
