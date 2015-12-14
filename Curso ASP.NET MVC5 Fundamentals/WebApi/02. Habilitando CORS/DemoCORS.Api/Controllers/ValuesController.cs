@@ -4,10 +4,12 @@ using System.Web.Http.Cors;
 
 namespace DemoCORS.Api.Controllers
 {
-    [EnableCors("*", "*", "GET")]
+    
     public class ValuesController : ApiController
     {
         // GET api/values
+        [HttpGet]
+        [EnableCors("*","*","*")]
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };

@@ -1,4 +1,5 @@
 ﻿using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace DemoCORS.Api
 {
@@ -10,6 +11,11 @@ namespace DemoCORS.Api
             //var cors = new EnableCorsAttribute("*","*","GET");
             //config.EnableCors(cors);
             //Substitui pelo filtro [EnableCors("*","*","GET")]
+            var cors = new EnableCorsAttribute(
+            origins: "*",
+            headers: "*",
+            methods: "*");
+            config.EnableCors(cors);
 
 
             // Web API routes
