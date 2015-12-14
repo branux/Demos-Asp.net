@@ -1,0 +1,6 @@
+﻿1. Adicione um DropDownList
+2. No designer, selecione e clique sobre a seta para direita e Add DataSource
+3. Configure a conexão com o banco através do SQL Database e selecione a tabela
+4. Adicione um gridview e adicione um datasource
+5. Ao selecionar uma tabela criar uma clausula where definidino o ddl no controle do parâmetro
+6. Repetir a mesma coisa com o ViewDetail

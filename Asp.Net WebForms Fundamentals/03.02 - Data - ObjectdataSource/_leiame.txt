@@ -1,0 +1,5 @@
+1. Adicione .MDF à pasta App_Data através do Include
+2. Crie um Linq To SQL Class na pasta Data
+3. Abra o Server Explore (clique 2 x na base) e arraste as tabelas que vai trabalhar
+4. Consumir o dbml criado encapsulando os métodos
+5. Configurar o DataSource dos componentes escolhendo o Type Object
