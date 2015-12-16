@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="DemoMasterPage.Site" %>
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title></title>
+    <style>
+        div#logoSis {
+            font-size:30px;
+            width:48%;
+            display:inline-block;
+        }
+        div#dataSis {
+            font-size:14px;
+            width:45%;
+            display:inline-block;
+            text-align:right;
+        }
+        #main {
+            margin:10px auto;
+            padding:10px 20px;
+            width:80%;
+            min-height:400px;
+            border: 2px solid #000;
+
+        }
+        footer {
+            font-style:italic;
+            text-align:center;
+        }
+    </style>
+     <script>
+         window.onload = function () {
+             alert("Página mestre carregada");
+         };
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server" />
+</head>
+<body>
+    <header>
+        <div id="logoSis">
+            Meu Logo
+        </div>
+        <div id="dataSis">
+            <asp:Label Text="" ID="dataLabel" runat="server" />
+        </div>
+    </header>
+    <br />
+    <form id="form1" runat="server">
+    <div id="main">
+        <asp:ContentPlaceHolder ID="cplMain" runat="server" />
+    </div>
+    </form>
+    <footer>
+        &copy; 2015
+    </footer>
+</body>
+</html>
